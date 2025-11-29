@@ -1,0 +1,280 @@
+.container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.content {
+  background: white;
+  border-radius: 20px;
+  padding: 40px;
+  max-width: 600px;
+  width: 100%;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+  color: #333;
+  text-align: center;
+  margin: 0 0 10px 0;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.subtitle {
+  text-align: center;
+  color: #666;
+  margin: 0 0 30px 0;
+  font-size: 14px;
+}
+
+.upload-section {
+  margin: 30px 0;
+}
+
+.upload-box {
+  position: relative;
+  border: 2px dashed #667eea;
+  border-radius: 12px;
+  padding: 40px;
+  text-align: center;
+  background: #f8f9ff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.upload-box:hover {
+  border-color: #764ba2;
+  background: #f0f2ff;
+}
+
+.upload-box.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.file-input {
+  display: none;
+}
+
+.upload-placeholder {
+  pointer-events: none;
+}
+
+.upload-icon {
+  width: 60px;
+  height: 60px;
+  color: #667eea;
+  margin-bottom: 15px;
+}
+
+.upload-placeholder p {
+  margin: 10px 0;
+  color: #333;
+}
+
+.upload-placeholder p:first-of-type {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.file-types {
+  font-size: 12px;
+  color: #999;
+  margin-top: 5px !important;
+}
+
+.preview-container {
+  position: relative;
+  display: inline-block;
+}
+
+.preview-image {
+  max-width: 100%;
+  max-height: 300px;
+  border-radius: 8px;
+  object-fit: contain;
+}
+
+.clear-btn {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #ff6b6b;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.clear-btn:hover {
+  background: #ff5252;
+  transform: scale(1.1);
+}
+
+.error-message {
+  background: #ffe0e0;
+  border: 1px solid #ff6b6b;
+  color: #d63031;
+  padding: 12px 15px;
+  border-radius: 8px;
+  margin: 20px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+}
+
+.error-icon {
+  font-size: 16px;
+}
+
+.result-section {
+  background: #f0f2ff;
+  border: 2px solid #667eea;
+  border-radius: 12px;
+  padding: 25px;
+  margin: 20px 0;
+  text-align: center;
+}
+
+.result-section.success {
+  background: #e8f5e9;
+  border-color: #4caf50;
+}
+
+.result-label {
+  color: #666;
+  margin: 0 0 10px 0;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.result-number {
+  font-size: 80px;
+  font-weight: 700;
+  color: #667eea;
+  margin: 15px 0;
+  font-family: 'Courier New', monospace;
+}
+
+.result-section.success .result-number {
+  color: #4caf50;
+}
+
+.confidence {
+  color: #999;
+  font-size: 12px;
+  margin: 0;
+}
+
+.button-group {
+  display: flex;
+  gap: 12px;
+  margin: 30px 0 20px 0;
+}
+
+.identify-btn,
+.clear-all-btn {
+  flex: 1;
+  padding: 14px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.identify-btn {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.identify-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+}
+
+.identify-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.clear-all-btn {
+  background: #f0f0f0;
+  color: #666;
+  border: 1px solid #ddd;
+}
+
+.clear-all-btn:hover:not(:disabled) {
+  background: #e0e0e0;
+}
+
+.clear-all-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.info-section {
+  background: #f9f9f9;
+  border-radius: 8px;
+  padding: 20px;
+  margin-top: 30px;
+}
+
+.info-section h3 {
+  color: #333;
+  margin: 0 0 15px 0;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.info-section ol {
+  margin: 0;
+  padding-left: 20px;
+  color: #666;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.info-section li {
+  margin-bottom: 8px;
+}
+
+@media (max-width: 600px) {
+  .content {
+    padding: 25px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  .result-number {
+    font-size: 60px;
+  }
+
+  .button-group {
+    flex-direction: column;
+  }
+
+  .upload-box {
+    padding: 30px 20px;
+  }
+}
